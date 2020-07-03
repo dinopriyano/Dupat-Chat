@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "762097256723",
+    "firebase_url": "https://dupatchat.firebaseio.com",
+    "project_id": "dupatchat",
+    "storage_bucket": "dupatchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762097256723:android:90ae57a3364664cb1d72e6",
+        "android_client_info": {
+          "package_name": "com.dupat.dupatchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762097256723-o1qiae7e8c155eetu15s3vv2paf6o5oa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dupat.dupatchat",
+            "certificate_hash": "36376444ebadc3c378a75d2e579cac08812e5265"
+          }
+        },
+        {
+          "client_id": "762097256723-mn6gatpaj8ajleis8r09koj4g2l3jo2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCezTraYewkjbl8MFc2rNRxZr537B6C-Rg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "762097256723-mn6gatpaj8ajleis8r09koj4g2l3jo2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

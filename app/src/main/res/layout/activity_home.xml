@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#F8F8F8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".actHome">
+
+    <LinearLayout
+        android:id="@+id/layoutToolBar"
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <com.loopeer.shadow.ShadowView
+            app:shadowRadius="2dp"
+            android:elevation="2dp"
+            app:shadowColor="#90a4ae"
+            app:shadowMarginBottom="2dp"
+            android:layout_width="match_parent"
+            app:cornerRadiusBL="20dp"
+            app:cornerRadiusBR="20dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/accentDark"
+                    android:fontFamily="@font/noto_bold"
+                    android:textSize="18sp"
+                    android:id="@+id/titleFragment"
+                    android:lineSpacingExtra="-8sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dupat Chat"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:onClick="actionToFindPerson"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/btnToSearchFriend"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_margin="5dp"
+                        android:layout_width="22dp"
+                        android:layout_height="26dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_add_friend" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/toolBar"/>
+
+            </RelativeLayout>
+
+        </com.loopeer.shadow.ShadowView>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@id/layoutToolBar"
+        android:layout_width="match_parent"
+        android:id="@+id/fragmentContainer"
+        android:layout_height="match_parent"/>
+
+    <com.etebarian.meowbottomnavigation.MeowBottomNavigation
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomNav"
+        android:background="#00FFFFFF"
+        app:mbn_circleColor="#ffffff"
+        app:mbn_backgroundBottomColor="#ffffff"
+        app:mbn_countBackgroundColor="#ff6f00"
+        app:mbn_countTextColor="#ffffff"
+        app:mbn_defaultIconColor="#90a4ae"
+        app:mbn_rippleColor="#2f424242"
+        app:mbn_selectedIconColor="#3FC0F8"
+        app:mbn_shadowColor="#1f212121"/>
+
+</RelativeLayout>

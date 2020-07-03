@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".actChat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutToolBar"
+            android:elevation="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.loopeer.shadow.ShadowView
+                app:shadowRadius="2dp"
+                android:elevation="2dp"
+                app:shadowColor="#90a4ae"
+                app:shadowMarginBottom="2dp"
+                android:layout_width="match_parent"
+                app:cornerRadiusBL="20dp"
+                app:cornerRadiusBR="20dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="20dp"
+                        android:onClick="actionBack"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/ic_back_medium"/>
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/accentDark"
+                            android:fontFamily="@font/noto_bold"
+                            android:textSize="18sp"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:id="@+id/namaUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dupat Chat"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textSize="10sp"
+                            android:id="@+id/txtOnlineStatus"
+                            android:layout_marginTop="-10dp"
+                            android:fontFamily="@font/notosans_regular"
+                            android:textColor="#444444"
+                            android:layout_height="wrap_content"
+                            android:text="Last seen 08:40"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:layout_marginRight="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toolBar"/>
+
+                </LinearLayout>
+
+            </com.loopeer.shadow.ShadowView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_above="@id/containerText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            android:layout_below="@id/layoutToolBar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerChat"
+                android:nestedScrollingEnabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/containerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#fff"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="25dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:onClick="actionAttach"
+                            android:layout_width="20dp"
+                            android:src="@drawable/ic_attach"
+                            android:layout_height="20dp"
+                            android:adjustViewBounds="true"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:scrollHorizontally="false"
+                        android:minLines="1"
+                        android:maxLines="4"
+                        android:id="@+id/etChat"
+                        android:maxLength="2000"
+                        android:layout_gravity="center_vertical"
+                        android:scrollbars="none"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:inputType="textMultiLine"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="#00FFFFFF"
+                        android:hint="type here...."/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/accentDark"/>
+
+                    <RelativeLayout
+                        android:layout_gravity="bottom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <ImageView
+                            android:onClick="actionSend"
+                            android:layout_width="20dp"
+                            android:src="@drawable/ic_send"
+                            android:layout_height="20dp"
+                            android:adjustViewBounds="true"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
